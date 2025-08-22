@@ -1,0 +1,9 @@
+#IDS MODE
+alert icmp any any -> any any (msg:"ICMP (ping) detected";itype:8;sid:2522653;)
+alert tcp any any -> any 22 (msg:"SSH connection attempt"; flags:S; sid:2522655;)
+alert http any any -> any any (msg:"Suspicious EXE download"; content:".exe"; http_uri; sid:2522657;)
+alert tcp any any -> any any (msg:"TCP SYN scan"; flags:S; sid:2522658;)
+
+#IPS MODE
+drop http any any -> any any (msg:"Block suspicious  EXE download"; content:".exe"; http_uri; sid:25226560;)
+drop tcp any any -> any any (msg:"Block TCP SYN scan"; flags:S; sid:2522661;)
