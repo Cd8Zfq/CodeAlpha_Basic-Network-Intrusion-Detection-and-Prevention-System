@@ -1,4 +1,4 @@
-# if your suricata running as gateway
+# if suricata runs as gateway
 sudo iptables -I FORWARD -j NFQUEUE
 
 # rules for host layer only
