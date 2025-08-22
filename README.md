@@ -1,4 +1,4 @@
-# 🚨 Basic Network Intrusion Detection and Prevention System
+## 🚨 Basic Network Intrusion Detection and Prevention System
 
 This project is a basic Network Intrusion Detection and Prevention System (NIDS/NIPS) built with the open-source tool Suricata.
 It is designed to monitor, detect, and prevent intrusions on a network in real time.
