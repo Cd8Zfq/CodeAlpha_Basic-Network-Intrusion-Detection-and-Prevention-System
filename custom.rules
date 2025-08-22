@@ -7,5 +7,6 @@ alert tcp any any -> any any (msg:"TCP SYN scan"; flags:S; sid:2522658;)
 #IPS MODE
 drop http any any -> any any (msg:"Block suspicious  EXE download"; content:".exe"; http_uri;nocase; sid:25226560;)
 drop http any any -> any any (msg:"Block suspicious ZIP download"; content:".zip";http_uri;nocase; sid:25226561;)
-drop any any -> 5.5.5.5 any (msg:"Ping to 5.5.5.5 blocked";itype:8;sid:25226562;)
+drop icmp any any -> 5.5.5.5 any (msg:"Ping to 5.5.5.5 blocked";itype:8;sid:25226562;)
+
 
